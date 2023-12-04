@@ -7,6 +7,7 @@
   <title>Curso Responsive Design y Arquitectura CSS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
   <link rel="stylesheet" href="css/init.css">
+  <link rel="stylesheet" media="print" href="css/print.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -128,11 +129,41 @@
       <p>
         El objetivo de esta etiqueta, no es sólo mostrar diferentes tamaños de la misma imagen,
         sino también mostrar imágenes diferentes. Por ejemplo, recortar una imagen de forma diferente según el tamaño de
-        la
-        pantalla y las diferencias en el diseño. Esto se conoce como "dirección de arte".
+        la pantalla y las diferencias en el diseño. Esto se conoce como "dirección de arte".
       </p>
+      <picture>
+        <source srcset="img/kitten-large.png" media="(min-width:1024px)">
+        <source srcset="img/kitten-medium.png" media="(min-width:600px)">
+        <img src="img/kitten-small.png" alt="kitten gatito">
+      </picture>
+      <br>
+      <picture>
+        <source srcset="img/butterfly.webp" type="image/webp">
+        <img src="img/butterfly.jpg" alt="Mariposa">
+      </picture>
+
+      <div class="responsive-media">
+        <video src="assets/kenai.mp4" controls></video>
+      </div>
+      <video src="assets/kenai.mp4" controls class="aspect-ratio-16-9"></video>
+      <div class="aspect-ratio-16-9">
+
+      </div>
+
+      <br>
       <h3>Videos Responsivos</h3>
+      <video src="assets/kenai.mp4" controls></video>
       <h3>Iframes Responsivos </h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/udGrXWeJp1Y?si=6eDNFquKbtyONam0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <br>
+      <div class="responsive-media">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/udGrXWeJp1Y?si=6eDNFquKbtyONam0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <iframe class="aspect-ratio-16-9" width="560" height="315" src="https://www.youtube.com/embed/udGrXWeJp1Y?si=6eDNFquKbtyONam0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <br>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113305.16060882315!2d-99.67030730273436!3d27.444770899999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866122edde28ada7%3A0xac672c83778cbefe!2sWalmart!5e0!3m2!1ses-419!2smx!4v1701730877341!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="aspect-ratio-1-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113305.16060882315!2d-99.67030730273436!3d27.444770899999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866122edde28ada7%3A0xac672c83778cbefe!2sWalmart!5e0!3m2!1ses-419!2smx!4v1701730877341!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </article>
     <hr>
     <article id="media-queries" class="full-screen">
@@ -143,7 +174,7 @@
         tenido cierto grado de capacidad para el reconocimiento de dispositivos mediante el uso de tipos de medios. Por
         ejemplo:
       </p>
-      <pre><code class="language-html">&lt;link rel="stylesheet" href="print.css" media="print"&gt;</code></pre>
+      <pre><code class="language-html">&lt;link rel="stylesheet" media="print" href="print.css" &gt;</code></pre>
       <p>
         Con <i>CSS3</i>, la <i>W3C</i> perfeccionó y mejoró los tipos de medios con características multimedia y con la
         capacidad de
