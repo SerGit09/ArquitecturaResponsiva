@@ -73,3 +73,71 @@ iframe {
     /* Ideal para los videos */
     aspect-ratio: 1/1;
 }
+
+@media print{
+    @page{
+        size: A5 landscape;
+    }
+
+    body{
+        font-size: 10pt;
+        font-family: serif;
+        background-color: #000;
+        color: greenyellow;
+    }
+}
+
+@media screen and (prefers-reduced-motion:no-preference){
+    html{
+        scroll-behavior: auto;
+        scroll-behavior: smooth;
+    }
+}
+
+ @media screen and (prefers-color-scheme: dark){
+    html{
+        background-color: black;
+        color: teal;
+    }
+}
+
+ @media screen and (prefers-color-scheme: light){
+    html{
+        background-color: white;
+        color: darkblue;
+    }
+} 
+
+@media screen and (prefers-color-scheme:no-preference){
+    html{
+        background-color: white;
+        color: darkred;
+    }
+}
+
+@media screen and (prefers-color-scheme:dark){
+    html{
+        background-color: white;
+        color: black;
+    }
+}
+
+/* En Mobile First se usa min-width que significa lo minimo, del valor que des hacia arriba*/
+@media screen and (min-width: 480px){
+    html{
+        background-color: lightpink;
+    }
+}
+
+/* En Desktop First se usa max-width que significa lo maximo, del valor que des hacia abajo*/
+@media screen and (max-width: 1024px){
+    html{
+        background-color: lightgreen;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    html{
+        background-color: white;
+    }
+}
